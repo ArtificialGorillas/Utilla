@@ -1,12 +1,12 @@
-﻿using System;
-using BepInEx;
+﻿using BepInEx;
+using System;
+using UnityEngine;
 using Utilla.HarmonyPatches;
 using Utilla.Utils;
-using UnityEngine;
 
 namespace Utilla
 {
-	[BepInPlugin("org.legoandmars.gorillatag.utilla", "Utilla", "1.6.14")]
+    [BepInPlugin("org.legoandmars.gorillatag.utilla", "Utilla", "1.6.15")]
     public class Utilla : BaseUnityPlugin
     {
         static Events events = new Events();
@@ -18,7 +18,7 @@ namespace Utilla
             UtillaLogging.Logger = Logger;
 
             DontDestroyOnLoad(this);
-            RoomUtils.RoomCode = RoomUtils.RandomString(6); // Generate a random room code in case we need it
+            RoomUtils.RoomCode = RoomUtils.RandomString(6);
 
             _networkController = gameObject.AddComponent<UtillaNetworkController>();
 
@@ -31,13 +31,13 @@ namespace Utilla
         }
 
         void PostInitialized(object sender, EventArgs e)
-		{
+        {
             var go = new GameObject("CustomGamemodesManager");
             GameObject.DontDestroyOnLoad(go);
 
             var gmm = go.AddComponent<GamemodeManager>();
 
             _networkController.gameModeManager = gmm;
-		}
+        }
     }
 }
