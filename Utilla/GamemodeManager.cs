@@ -43,73 +43,61 @@ namespace Utilla
 
         GameObject moddedGameModesObject;
 
-        Dictionary<string, GameModeSelectorPath> gameModeButtonsDict = new Dictionary<string, GameModeSelectorPath>()
+        /// <summary>
+        /// Dictionary mapping game modes to their corresponding GameModeSelectorPath.
+        /// </summary>
+        private readonly Dictionary<string, GameModeSelectorPath> gameModeButtonsDict = new Dictionary<string, GameModeSelectorPath>()
         {
-            {
-                "GorillaTag",
-                new GameModeSelectorPath()
+            { "GorillaTag", new GameModeSelectorPath()
                 {
                     name = "StumpSelector",
                     transform = "Environment Objects/LocalObjects_Prefab/TreeRoom/TreeRoomInteractables/UI/GameModeSelector/Selector Buttons (1)",
-                    anchorPath = "anchor",
+                    anchorPath = "anchor"
                 }
             },
-            {
-                "VirtualStump", // not a scene
-				new GameModeSelectorPath()
+            { "VirtualStump", new GameModeSelectorPath()
                 {
                     name = "VirtualStumpSelector",
                     transform = "Environment Objects/LocalObjects_Prefab/VirtualStump_CustomMapLobby/ModeSelector_Group/Selector Buttons",
                     anchorPath = "anchor"
                 }
             },
-            {
-
-                "Cave",
-                new GameModeSelectorPath()
+            { "Cave", new GameModeSelectorPath()
                 {
                     name = "CaveSelector",
                     transform = "Cave_Main_Prefab/CaveComputer/GameModeSelector/Selector Buttons (1)",
-                    anchorPath = "anchor",
+                    anchorPath = "anchor"
                 }
             },
-            {   "Mountain",
-                new GameModeSelectorPath()
+            { "Mountain", new GameModeSelectorPath()
                 {
                     name = "MountainSelector",
                     transform = "Mountain/Geometry/goodigloo/GameModeSelector/Selector Buttons (1)",
-                    anchorPath = "anchor",
+                    anchorPath = "anchor"
                 }
             },
-            {   "Skyjungle",
-                new GameModeSelectorPath()
+            { "Skyjungle", new GameModeSelectorPath()
                 {
                     name = "CloudsSelector",
                     transform = "skyjungle/UI/GameModeSelector/Selector Buttons (1)",
-                    anchorPath = "anchor",
+                    anchorPath = "anchor"
                 }
             },
-            {
-                "Rotating",
-                new GameModeSelectorPath()
+            { "Rotating", new GameModeSelectorPath()
                 {
                     name = "RotatingSelector",
                     transform = "RotatingPermanentEntrance/UI (1)/GameModeSelector/Selector Buttons (1)",
                     anchorPath = "anchor"
                 }
             },
-            {
-                "Metropolis",
-                new GameModeSelectorPath()
+            { "Metropolis", new GameModeSelectorPath()
                 {
                     name = "MetroSelector",
                     transform = "MetroMain/ComputerArea/GameModeSelector/Selector Buttons (1)",
                     anchorPath = "anchor"
                 }
             },
-            {
-                "Beach",
-                new GameModeSelectorPath()
+            { "Beach", new GameModeSelectorPath()
                 {
                     name = "BeachSelector",
                     transform = "Beach/BeachComputer (1)/GameModeSelector/Selector Buttons (1)",
@@ -117,6 +105,7 @@ namespace Utilla
                 }
             }
         };
+
 
         public void Start()
         {

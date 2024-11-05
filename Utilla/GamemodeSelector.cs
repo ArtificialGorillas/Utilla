@@ -43,7 +43,7 @@ namespace Utilla
             foreach (var mb in modeSelectButtons)
             {
                 TMP_Text gamemodeTitle = (TMP_Text)AccessTools.Field(mb.GetType(), "gameModeTitle").GetValue(mb);
-                gamemodeTitle.fontSize = 50f;
+                gamemodeTitle.fontSize = 60f;
                 gamemodeTitle.transform.localPosition = new Vector3(gamemodeTitle.transform.localPosition.x, gamemodeTitle.transform.localPosition.y + 0.1f, gamemodeTitle.transform.localPosition.z);
             }
 
